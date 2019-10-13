@@ -1,0 +1,176 @@
+/* In this layer, you should have well-designed pieces of UI that can be reused in more than one spot (or be applied to just one spot). Also, classes must be named explicitly: */
+
+.square{
+  background-color:#EEEDD2;
+  
+}
+
+.dark{
+  background-color: #779656;
+}
+
+.correct{
+  background-color: green;
+}
+
+.wrong{
+  background-color: red;
+}
+
+.squarePrompt{
+  margin: 0;
+  position: absolute;
+  color: white;
+  top: 40vw;
+  left: 29vw;
+  font-family: var(--font-primary);
+  font-size: 10rem;
+  /* display: none; */
+}
+
+@media(min-width:1024px){
+  .squarePrompt{
+    margin: 0;
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* display: none; */
+  }
+}
+
+.squarePromptWrong{
+  color: red;
+}
+
+.squareReminder{
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  /* display: none; */
+}
+
+@media(min-width:1024px){
+  .squareReminder{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: none;
+  }
+}
+
+.startButton{
+  margin: 0 auto;
+  display: block;
+  font-size: 2rem;
+  padding: .5rem 1rem;
+  font-family: var(--font-primary);
+  background-color: #D37E18;
+  color: white;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.score{
+  color: white;
+  font-size: 6rem;
+  /* line-height: rem; */
+}
+
+.scoreDisplay{
+  height: 7rem;
+  width: 7rem;
+  background-color:#639924;
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+}
+
+.timesUp{
+  position: absolute;
+  margin: 0 auto;
+  height: 80vw;
+  width: 80vw;
+  top: 30vw;
+  left: 10vw;
+  background-color: white;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+  display: none;
+}
+
+.description{
+  margin: 0 auto;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.description p{
+  margin-top: .5rem;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.description ul{
+  list-style: inside;
+}
+
+.description ul li{
+  margin-top: .5rem;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+#progressbar{
+  width: 95vw;
+  margin: 0 auto;
+  margin-top: .7rem;
+  border-radius: 20px;
+}
+
+#progressbar .ui-progressbar-value {
+  background-color:#639924;
+  height: 12px;
+}
+
+@media(min-width:1024px){
+  #progressbar{
+    width: 40vw;
+    margin: 0 auto;
+    margin-top: .7rem;
+    border-radius: 20px;
+  }
+  
+  #progressbar .ui-progressbar-value {
+    background-color:#639924;
+    height: 12px;
+  }
+}
+
+@media(min-width:1024px){
+  .desktopContainer{
+    display: flex;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  .chessContainer{
+    flex:2;
+    position: relative;
+  }
+
+  .uiContainer{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+

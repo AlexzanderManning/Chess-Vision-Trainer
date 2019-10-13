@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+  </script>
+  <script src="/assets/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.js"></script>
+  <link rel="stylesheet" href="/assets/jquery-ui-1.12.1/jquery-ui.theme.css">
+  <link rel="stylesheet" href="/assets/css/00_table_of_contents.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chess Vision Trainer</title>
+</head>
+<body>
+  <div class="container">
+      <div class="timesUp">
+        <h2>Times Up!</h2>
+        <p>You Scored:</p>
+        <p><span class="score darkFont">0</span></p>
+        <button class="startButton">Start Training</button>
+      </div>
+
+      <div class="desktopContainer">
+          <div class="chessContainer">
+              <div class="text-center"><h1 class="squareReminder lightFont">a8</h1></div>
+              
+              <div id="chessboard" class="grid">
+                  <h1 class="squarePrompt">a8</h1>
+                  <!-- ================== 8TH RANK==================== -->
+                  <div id="a8" class="square rank__8 file__a"></div>
+                  <div id="b8" class="dark square rank__8 file__a isDark"></div>
+                  <div id="c8" class="square rank__8 file__a"></div>
+                  <div id="d8" class="dark square rank__8 file__a isDark"></div>
+                  <div id="e8" class="square rank__8 file__a"></div>
+                  <div id="f8" class="dark square rank__8 file__a isDark"></div>
+                  <div id="g8" class="square rank__8 file__a"></div>
+                  <div id="h8" class="dark square rank__8 file__a isDark"></div>
+        
+                  <!-- ================== 7TH RANK==================== -->
+                  <div id="a7" class="dark square rank__7 file__a"></div>
+                  <div id="b7" class="square rank__7 file__a isDark"></div>
+                  <div id="c7" class="dark square rank__7 file__a"></div>
+                  <div id="d7" class="square rank__7 file__a isDark"></div>
+                  <div id="e7" class="dark square rank__7 file__a"></div>
+                  <div id="f7" class="square rank__7 file__a isDark"></div>
+                  <div id="g7" class="dark square rank__7 file__a"></div>
+                  <div id="h7" class="square rank__7 file__a isDark"></div>
+        
+                  <!-- ================== 6TH RANK==================== -->
+                  <div id="a6" class="square rank__6 file__a"></div>
+                  <div id="b6" class="dark square rank__6 file__a"></div>
+                  <div id="c6" class="square rank__6 file__a"></div>
+                  <div id="d6" class="dark square rank__6 file__a"></div>
+                  <div id="e6" class="square rank__6 file__a"></div>
+                  <div id="f6" class="dark square rank__6 file__a"></div>
+                  <div id="g6" class="square rank__6 file__a"></div>
+                  <div id="h6" class="dark square rank__6 file__a"></div>
+        
+                  <!-- ================== 5TH RANK==================== -->
+                  <div id="a5" class="dark square rank__5 file__a"></div>
+                  <div id="b5" class="square rank__5 file__a"></div>
+                  <div id="c5" class="dark square rank__5 file__a"></div>
+                  <div id="d5" class="square rank__5 file__a"></div>
+                  <div id="e5" class="dark square rank__5 file__a"></div>
+                  <div id="f5" class="square rank__5 file__a"></div>
+                  <div id="g5" class="dark square rank__5 file__a"></div>
+                  <div id="h5" class="square rank__5 file__a"></div>
+        
+                  <!-- =====4============ 4TH RANK==================== -->
+                  <div id="a4" class="square rank__4 file__a"></div>
+                  <div id="b4" class="dark square rank__4 file__a"></div>
+                  <div id="c4" class="square rank__4 file__a"></div>
+                  <div id="d4" class="dark square rank__4 file__a"></div>
+                  <div id="e4" class="square rank__4 file__a"></div>
+                  <div id="f4" class="dark square rank__4 file__a"></div>
+                  <div id="g4" class="square rank__4 file__a"></div>
+                  <div id="h4" class="dark square rank__4 file__a"></div>
+        
+                  <!-- ================== 3RD RANK==================== -->
+                  <div id="a3" class="dark square rank__3 file__a"></div>
+                  <div id="b3" class="square rank__3 file__a"></div>
+                  <div id="c3" class="dark square rank__3 file__a"></div>
+                  <div id="d3" class="square rank__3 file__a"></div>
+                  <div id="e3" class="dark square rank__3 file__a"></div>
+                  <div id="f3" class="square rank__3 file__a"></div>
+                  <div id="g3" class="dark square rank__3 file__a"></div>
+                  <div id="h3" class="square rank__3 file__a"></div>
+        
+                  <!-- ================== 2ND RANK==================== -->
+                  <div id="a2" class="square rank__2 file__a"></div>
+                  <div id="b2" class="dark square rank__2 file__a"></div>
+                  <div id="c2" class="square rank__2 file__a"></div>
+                  <div id="d2" class="dark square rank__2 file__a"></div>
+                  <div id="e2" class="square rank__2 file__a"></div>
+                  <div id="f2" class="dark square rank__2 file__a"></div>
+                  <div id="g2" class="square rank__2 file__a"></div>
+                  <div id="h2" class="dark square rank__2 file__a"></div>
+        
+                  <!-- ================== 1ST RANK==================== -->
+                  <div id="a1" class="dark square rank__1 file__a"></div>
+                  <div id="b1" class="square rank__1 file__a"></div>
+                  <div id="c1" class="dark square rank__1 file__a"></div>
+                  <div id="d1" class="square rank__1 file__a"></div>
+                  <div id="e1" class="dark square rank__1 file__a"></div>
+                  <div id="f1" class="square rank__1 file__a"></div>
+                  <div id="g1" class="dark square rank__1 file__a"></div>
+                  <div id="h1" class="square rank__1 file__a"></div>
+              </div>
+              <div id="progressbar"></div>
+          </div>
+          
+          <div class="uiContainer">
+              <div class="container text-center scoreContainer">
+                  <br>
+                  <div class="scoreDisplay container"><p><span class="score">0</span></p></div>
+                  <button class="startButton">Start Training</button>
+                </div>
+          
+                <div class="description">
+                  <p>Knowing the chessboard coordinates is a very important chess skill:</p>
+                  <ul>
+                    <li>Most chess courses and exercises use the algebraic notation extensively.</li>
+                    <li>It makes it easier to talk to your chess friends, since you both understand the "language of chess".</li>
+                    <li>You can analyze a game more effectively if you can quickly recognize coordinates.</li>
+                  </ul>
+                  <br>
+                  <p>A coordinate appears on the board and you must click on the corresponding square. You have 30 seconds to correctly map as many squares as possible!</p>
+                </div>
+            </div>
+          </div>
+      </div>    
+          
+
+  </div>
+  <script src="/assets/js/functions.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

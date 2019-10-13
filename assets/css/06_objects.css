@@ -1,0 +1,50 @@
+/* Objects follow OOCSS (Object Oriented CSS) principles. They are small and reusable pieces with no aesthetics which can be used in UI composition. Examples are wrappers, grids, skins to apply to lists, buttons, inputs, etc. In other words: any pattern that is repeated over your UI is a potential object candidate. */
+.container{
+  margin: 0 auto;
+}
+
+.grid {
+    margin: 0 auto;
+    width: 95vw;
+    height: 95vw;
+    margin-top: 1rem;
+    margin-bottom: .5em;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+@media(min-width:1024px){
+  .grid {
+    margin: 2em auto;
+    width: 40vw;
+    height: 40vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    position: relative;
+}
+}
+
+.grid::before {
+  /* content: ''; */
+  /* width: 0; */
+  /* padding-bottom: 100%; */
+  /* grid-row: 1 / 1; */
+  /* grid-column: 1 / 1; */
+}
+
+
+/*
+.grid > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+} */
+/* tool that allows you to see the layout of the grid, delete after you are satisfied with layout */
+.grid > *{
+  /* background-color: darkgray; */
+  /* color: white; */
+  /* padding: .5em; */
+}
+

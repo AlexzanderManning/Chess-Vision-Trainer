@@ -1,0 +1,27 @@
+/* Settings refer to all your global configurations and variables, like sizes, colors, and fonts. They should be used to aid in your build configuration, and therefore should not contain actual CSS code */
+
+/* =========Font Imports=========== */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* ========Global========= */
+:root{
+  /* ========COLORS======= */
+  /* Background Colors */
+  /* --main-background: ;
+  --intro-background: ;
+  --footer-background: ;
+  --featured-background: ; */
+
+  /* Accent Colors */
+ 
+
+  /* Neutral */
+  /* --neutral:  ; */
+
+
+  /* ========FONTS======== */
+  --font-primary: 'Roboto', sans-serif;
+  /* --font-secondary: ; */
+}
+
+
