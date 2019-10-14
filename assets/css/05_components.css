@@ -19,26 +19,13 @@
 
 .squarePrompt{
   margin: 0;
-  position: absolute;
-  color: white;
-  top: 40vw;
-  left: 29vw;
   font-family: var(--font-primary);
   font-size: 10rem;
-  display: none;
-}
-
-@media(min-width:1024px){
-  .squarePrompt{
-    margin: 0;
-    color: white;
-    font-family: var(--font-primary);
-    font-size: 10rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: none;
-  }
+  color: white;
+  position: absolute;
+  top: 40vw;
+  left: 29vw;
+  /* display: none; */
 }
 
 .squarePromptWrong{
@@ -159,6 +146,7 @@
     display: flex;
     margin: 0 auto;
     max-width: 80%;
+    /* position: relative; */
   }
 
   .chessContainer{
@@ -174,3 +162,14 @@
   }
 }
 
+@media(min-width:1024px){
+  .squarePrompt{
+    margin: 0;
+    padding: 0;
+    display: inline;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    display: none;
+  }
+}
